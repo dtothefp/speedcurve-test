@@ -24,5 +24,17 @@ export default {
       }
     ],
     hot: true
+  },
+  cb(config) {
+    const {environment} = config;
+    const {branch, asset_path: assetPath} = environment;
+
+    if (branch) {
+      Object.assign(environment, {
+        asset_path: assetPath.replace(branch + '/', '')
+      });
+    }
+
+    return config;
   }
 };
