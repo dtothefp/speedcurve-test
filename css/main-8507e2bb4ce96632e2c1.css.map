@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///webpack:///src/js/local-main.scss"],"names":[],"mappings":"AAAA,aAEI,gBAAkB","file":"css/main-8507e2bb4ce96632e2c1.css","sourcesContent":[".content {\n  div {\n    background: green;\n  }\n}\n\n\n\n/** WEBPACK FOOTER **\n ** webpack:///src/js/local-main.scss\n **/"],"sourceRoot":""}
