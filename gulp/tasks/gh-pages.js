@@ -9,6 +9,7 @@ export default function(gulp, plugins, config) {
     return gulp.src(src)
     .pipe(
       ghPages({
+        remoteUrl: 'https://github.com/dtothefp/speedcurve-test.git',
         force: true
       })
     );
