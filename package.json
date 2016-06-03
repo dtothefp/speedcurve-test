@@ -24,7 +24,6 @@
     "boiler-addon-assemble-nunjucks": "^1.1.16",
     "boiler-addon-webpack-babel": "^3.0.0",
     "boiler-addon-webpack-loaders-base": "^3.0.0",
-    "boiler-addon-webpack-loaders-optimize": "^3.0.0",
     "boiler-addon-webpack-styles": "^3.0.0",
     "boiler-config-webpack": "^3.0.0",
     "boiler-core": "^3.0.0",
