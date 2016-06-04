@@ -25,3 +25,5 @@ install:
 script:
   - npm start
   - npm run deploy
+after_script:
+  - npm test
