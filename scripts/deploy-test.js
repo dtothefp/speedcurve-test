@@ -54,7 +54,7 @@ Promise.all([sites, notes]).then((data) => {
         .set(options)
         .send({
           site_id: siteId,
-          note: `testing locally ${note}`
+          note
         });
     }
   } else {
