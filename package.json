@@ -21,8 +21,8 @@
     "babel-preset-react": "^6.1.18",
     "babel-preset-stage-0": "^6.1.18",
     "babel-register": "^6.3.13",
-    "boiler-addon-assemble-middleware": "^1.0.1",
-    "boiler-addon-assemble-nunjucks": "^1.1.16",
+    "boiler-addon-assemble-middleware": "^3.0.0",
+    "boiler-addon-assemble-nunjucks": "^3.0.0",
     "boiler-addon-webpack-babel": "^3.0.0",
     "boiler-addon-webpack-loaders-base": "^3.0.0",
     "boiler-addon-webpack-styles": "^3.0.0",
@@ -30,17 +30,16 @@
     "boiler-core": "^3.0.0",
     "boiler-preset-base": "^3.0.0",
     "boiler-utils": "^3.0.0",
+    "github": "^2.6.0",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-gh-pages": "^0.5.4",
+    "js-cookie": "^2.1.2",
     "lodash": "^4.0.0",
+    "minimist": "^1.2.0",
+    "query-string": "^4.2.0",
     "react": "^15.0.0",
     "react-dom": "^15.0.0",
     "superagent": "^2.0.0",
-    "superagent-promise": "^1.1.0",
     "webpack": "^1.12.14"
-  },
-  "devDependencies": {
-    "js-cookie": "^2.1.2",
-    "query-string": "^4.2.0"
   }
 }

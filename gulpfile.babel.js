@@ -7,7 +7,6 @@ const {sources, utils, environment} = config;
 const {isDev} = environment;
 const {buildDir} = sources;
 const {addbase} = utils;
-const noop = (cb) => cb();
 
 gulp.task('assemble', tasks.assemble);
 gulp.task('browser-sync', tasks.browserSync);
@@ -21,13 +20,28 @@ gulp.task('webpack:global', tasks.webpack);
 gulp.task('webpack:main', tasks.webpack);
 gulp.task('webpack', gulp.series('webpack:global', 'webpack:main'));
 
-gulp.task('build', gulp.series(
-  'clean',
-  'lint',
-  'webpack',
-  'assemble',
-  isDev ? 'browser-sync' : noop
-));
+gulp.task('build', (cb) => {
+  let task;
+
+  if (isDev) {
+    task = gulp.series(
+      'clean',
+      'lint',
+      'webpack',
+      'assemble',
+      'browser-sync'
+    );
+  } else {
+    task = gulp.series(
+      'clean',
+      'lint',
+      'webpack',
+      'assemble'
+    );
+  }
+
+  return task(cb);
+});
 
 gulp.task('default', gulp.series('build'));
 

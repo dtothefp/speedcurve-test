@@ -1,4 +1,4 @@
-import request from './utils/superagent';
+import request from 'superagent';
 
 const {SC_API: apiKey} = process.env;
 const authorization = new Buffer(`${apiKey}:x`).toString('base64');
@@ -32,7 +32,7 @@ const sites = request
 
 const notes = request
   .get(`https://api.speedcurve.com/v1/notes`)
-  .set(options);;
+  .set(options);
 
 Promise.all([sites, notes]).then((data) => {
   const [sites, notes] = data.map(({body}) => body);
@@ -61,7 +61,7 @@ Promise.all([sites, notes]).then((data) => {
     prom = Promise.reject(`No site found with name: ${name}`);
   }
 
-  return prom
+  return prom;
 }).then(({body}) => {
   console.log('**SUCCESS**', body);
 }).catch((err) => {

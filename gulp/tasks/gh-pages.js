@@ -4,11 +4,11 @@ export default function(gulp, plugins, config) {
   const {branch} = environment;
   const {buildDir} = sources;
   const {addbase} = utils;
-  const {GITHUB_API_KEY} = process.env;
+  // const {GITHUB_API_KEY} = process.env;
   const src = addbase(buildDir, '**/*');
 
   const remoteUrl = branch ?
-    `https://dtothefp:${GITHUB_API_KEY}@github.com/dtothefp/speedcurve-test.git` :
+    `https://github.com/dtothefp/speedcurve-test.git` :
     'git@github.com:dtothefp/speedcurve-test.git';
 
   return () => {
