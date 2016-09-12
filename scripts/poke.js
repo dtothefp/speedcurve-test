@@ -10,7 +10,7 @@ argv.user = argv.user || 'dtothefp';
 argv.repo = argv.repo || 'speedcurve-test';
 argv.state = argv.state || 'pending';
 argv['target-url'] = argv['target-url'] || 'https://www.google.com/';
-argv.description = argv.description || 'your\re pending...........wait for it!!';
+argv.description = argv.description || 'You\'re @hfa/perf tests are pending...wait for it!!';
 argv.context = argv.context || 'ci/slow-your-role';
 
 const defaultOptions = {

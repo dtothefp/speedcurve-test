@@ -5,6 +5,8 @@ node_js:
 env:
   global:
     - CXX=g++-4.8
+    - ENCRYPTION_LABEL: "4b6d0faa79f2"
+    - COMMIT_AUTHOR_EMAIL: "dtothefp@gmail.com"
 addons:
   apt:
     sources:
