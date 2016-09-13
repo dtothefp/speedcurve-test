@@ -4,7 +4,7 @@ import build from 'boiler-core';
 
 const {tasks, config, plugins: $} = build(gulp);
 const {sources, utils, environment} = config;
-const {isDev} = environment;
+const {isDev, branch} = environment;
 const {buildDir} = sources;
 const {addbase} = utils;
 
@@ -30,6 +30,12 @@ gulp.task('build', (cb) => {
       'webpack',
       'assemble',
       'browser-sync'
+    );
+  } else if (branch) {
+    task = gulp.series(
+      'lint',
+      'webpack',
+      'assemble'
     );
   } else {
     task = gulp.series(

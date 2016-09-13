@@ -21,3 +21,5 @@ node_modules
 # Vagrant
 .vagrant
 
+deploy_key*
+!deploy_key.enc
