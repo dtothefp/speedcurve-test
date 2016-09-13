@@ -1,4 +1,8 @@
-import './local-main.scss';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import SampleHello from './components/sample';
 
-/*eslint no-console:0*/
-console.log('MAIN INDEX.JS');
+ReactDOM.render(
+  <SampleHello userName={global.buildBoilerGlobals.userName} />,
+  document.querySelector('[data-react]')
+);

@@ -1,0 +1,16 @@
+.gold {
+  color: goldenrod;
+}
+
+.blush {
+  color: lavenderblush;
+}
+
+.brick {
+  color: firebrick;
+}
+
+.container {
+  width: 100vw;
+  text-align: center;
+}

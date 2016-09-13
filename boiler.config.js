@@ -1,5 +1,4 @@
 export default {
-  bucketBase: 'speedcurve-test',
   presets: ['base'],
   addons: [
     'assemble-middleware',

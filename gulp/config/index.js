@@ -1,4 +1,9 @@
 export default {
+  assemble: {
+    data: {
+      userName: process.cwd().split('/')[2]
+    }
+  },
   eslint: {
     basic: false,
     react: true,

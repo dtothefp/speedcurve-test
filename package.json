@@ -30,6 +30,7 @@
     "boiler-core": "^3.0.0",
     "boiler-preset-base": "^3.0.0",
     "boiler-utils": "^3.0.0",
+    "classnames": "^2.2.5",
     "github": "^3.0.0",
     "gulp": "github:gulpjs/gulp#4.0",
     "gulp-gh-pages": "^0.5.4",
