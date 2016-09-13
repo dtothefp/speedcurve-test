@@ -34,11 +34,6 @@ rm -rf $BUILD_TARGET/**/* || exit 0
 # Run our compile script
 doCompile
 
-# Now let's go have some fun with the cloned repo
-cd $BUILD_TARGET
-git config user.name "Travis CI"
-git config user.email "$COMMIT_AUTHOR_EMAIL"
-
 # If there are no changes to the compiled out (e.g. this is a README update) then just bail.
 if [ -z `git diff --exit-code` ]; then
     echo "No changes to the output on this push; exiting."
@@ -47,7 +42,7 @@ fi
 
 # Commit the "changes", i.e. the new version.
 # The delta will show diffs between new and old versions.
-git add .
+git add -A
 git commit -m "Deploy to GitHub Pages: ${SHA}"
 
 # Get the deploy key by using Travis's stored variables to decrypt deploy_key.enc
@@ -59,6 +54,11 @@ openssl aes-256-cbc -K $ENCRYPTED_KEY -iv $ENCRYPTED_IV -in deploy_key.enc -out 
 chmod 600 deploy_key
 eval `ssh-agent -s`
 ssh-add deploy_key
+
+# Now let's go have some fun with the cloned repo
+cd $BUILD_TARGET
+git config user.name "Travis CI"
+git config user.email "$COMMIT_AUTHOR_EMAIL"
 
 echo "pushing $TARGET_BRANCH to $SSH_REPO"
 
