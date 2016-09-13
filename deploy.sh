@@ -35,10 +35,10 @@ rm -rf $BUILD_TARGET/**/* || exit 0
 doCompile
 
 # If there are no changes to the compiled out (e.g. this is a README update) then just bail.
-if [ -z `git diff --exit-code` ]; then
-    echo "No changes to the output on this push; exiting."
-    exit 0
-fi
+# if [ -z `git diff --exit-code` ]; then
+    # echo "No changes to the output on this push; exiting."
+    # exit 0
+# fi
 
 # Get the deploy key by using Travis's stored variables to decrypt deploy_key.enc
 ENCRYPTED_KEY_VAR="encrypted_${ENCRYPTION_LABEL}_key"
