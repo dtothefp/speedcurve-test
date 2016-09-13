@@ -25,10 +25,6 @@ before_install:
   - npm install -g npm@^3
 install:
   - npm i
-before_script:
-  - export REPO=`git config remote.origin.url`
-  - export SSH_REPO=${REPO/https:\/\/github.com\//git@github.com:}
-  - echo "ssh repo: $SSH_REPO"
 script:
   - npm start
   - npm run deploy
