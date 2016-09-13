@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///webpack:///src/scss/main.scss"],"names":[],"mappings":"AAAA,KACE,uDACA,YACA","file":"css/global-a7aff7d99d64cc8d0590.css","sourcesContent":["body {\n  background: url('../img/kitten.jpg') no-repeat center center;\n  width: 100vw;\n  height: 100vh;\n}\n\n\n\n/** WEBPACK FOOTER **\n ** webpack:///src/scss/main.scss\n **/"],"sourceRoot":""}
