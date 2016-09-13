@@ -50,9 +50,9 @@ gulp.task('build', (cb) => {
 });
 
 gulp.task('default', gulp.series('build'));
-
-gulp.task('watch', gulp.series('build', () => {
+gulp.task('watch:build', () => {
   gulp.watch(
     addbase(buildDir, '{js,css}/**/*.{js,css}')
   ).on('change', $.browserSync.reload);
-}));
+});
+gulp.task('watch', gulp.series('build', 'watch:build'));
