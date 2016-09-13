@@ -14,7 +14,8 @@ addons:
     packages:
       - g++-4.8
 cache:
-  - node_modules
+  directories:
+    - node_modules
 notifications:
   email:
     on_success: never
